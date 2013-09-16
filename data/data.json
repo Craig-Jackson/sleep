@@ -1,0 +1,44 @@
+{
+    "stages": {
+        "stage1": {
+            "info": {
+                "brain" : "<p>During the first stage of sleep, the brain produces lots of theta wave activity. These are low frequency waves, or small undulations, commonly associated with deep relaxation.</p>",
+                "body" : "<p>The eyes begin to move slowly.</p> <p>Muscle activity slows, apart from possibly some muscle contractions following a sensation of falling.</p> <p>We experience periods of dreaminess akin to daydreaming, although we are actually in the process of falling asleep.</p>",
+                "waves" : "<p>Time - 2-5% of a normal night's sleep</p> <p>As we begin to fall asleep, we begin to produce Alpha waves, commonly associated with relaxation and peacefulness. During Alpha, it is not unusual to experience incredibly vivid sensations known otherwise as hypnogogic hallucinations.</p> <p>After Alpha comes Theta, a state pitched somewhere between wakefulness and sleep, and lasts on average around five to ten minutes. Theta waves are even slower in frequency and greater in amplitude than Alpha waves.</p>",
+                "hz" : "4-7 Hz"
+            }
+        },
+        "stage2": {
+            "info": {
+                "brain" : "<p>Brain activity begins to decrease during stage two - or NREM1 - although the thalamus and cortex remain active.</p>",
+                "body" : "<p>Both blood temperature and blood pressure begin to drop.</p> <p>Heart rate slows down.</p> <p>You become completely disengaged from the surroundings, as you enter the first stage of dreamless sleep.</p>",
+                "waves" : "<p>Time - 45-60% of a normal night's sleep</p> <p>As we move into the second stage of sleep, our brain waves move from Theta to Beta. Beta waves are very short periods of fast, rhythmic brain wave activity, commonly referred to as Sleep Spindles.</p>",
+                "hz" : "12-16 Hz"
+            }
+        },
+        "stage3": {
+            "info": {
+                "brain" : "<p>Interactions take place between the thalamus and cortex, as slow waves begin to appear. These waves carry a high voltage but are low frequency, and are called Delta waves.</p>",
+                "body" : "<p>Sleep walking occurs during NREM2</p> <p>We are most likely to sleep talking during NREM.2</p>",
+                "waves" : "<p>Time - Up to 40% of a normal night's sleep</p> <p>Delta waves carry a high voltage but are low frequency, and help to produce the perfect state for a deep, dreamless sleep. As a result, Delta wave sleep is sometimes referred to as slow wave sleep.</p>",
+                "hz" : "0.5-4 Hz"
+            }
+        },
+        "stage4": {
+            "info": {
+                "brain" : "<p>Activity between the thalamus and cortex decreases, with brainwaves now exclusively in the Delta range.</p>",
+                "body" : "<p>The autonomic activity of the nervous system decreases in frequency, and is the deepest kind of Slow Wave Sleep.</p> <p>This stage of sleep is the most replenishing physically.</p>",
+                "waves" : "<p>Time - Up to 20-25% of a normal night's sleep.</p> <p>Delta wave sleep continues in stage four of your evenings slumber. This is also the hardest period of sleep to be woken from, and also the slowest brainwaves you will experience.</p>",
+                "hz" : "0.5-4 Hz"
+            }
+        },
+        "stage5": {
+            "info": {
+                "brain" : "<p>Activity localises in the brain stem, thalamus, and the frontal lobe - the area of the brain responsible for regulating emotion.</p> <p>Cerebral neurons fire much faster during REM sleep than during NREM sleep.</p> <p>The frontal, posterior and lateral all show signs of deactivation, and these are all the parts of the brain thought to be mainly responsible for dreaming.</p> <p>The brain also shows large spikes in the frontal lobe - the part of the brain that controls movement of the eye.</p>",
+                "body" : "<p>Eyes move rapidly below the eyelids - unsurprisingly given the name of this stage. The movements are phasic as opposed to continuous.</p> <p>In most cases, there is no muscle activity during this phase of sleep, apart from in the diaphragm.</p> <p>Some people may experience short, sharp bursts of muscle activity in the face.</p> <p>During REM sleep, heart rates are known to increase.</p> <p>REM sleep also causes the rate of respiration to increase, by comparison to early stages in the cycle, as does oxygen consumption.</p> <p>Males are likely to experience either partial or full penile erection.</p> <p>Brain temperature increases considerably during REM sleep.</p>",
+                "waves" : "<p>As you move into REM sleep, your brain activity returns to the Theta range, passing through Beta en route. In fact, brain waves during REM sleep are similar to those experienced while awake. This increased brain activity also reignites our ability to dream.</p>",
+                "hz" : "4-8 Hz"
+            }
+        }
+    }
+}

@@ -1,0 +1,560 @@
+/** RESETS **/
+* {margin: 0;padding: 0;text-decoration: none;filter: inherit;outline:none;}
+*:focus{outline: none;}  
+h1, h2, h3, h4 ,h5, h6 {font-weight: normal;}
+a {outline:0; text-decoration:none;}
+a img {border: none;}
+ul, ol, li {list-style-type: none;}
+fieldset {border: 0;}
+table {border:0px;text-align:left;width:100%; border-spacing:0; border-collapse:collapse}
+th {font-weight: bold;text-align:left; border:1px solid #000; padding:5px;}
+tr, td {font-weight: normal;text-align:left; border:0;}
+td{padding:0px 5px 5px 0;}
+textarea {font-family:Arial, sans-serif;font-size:1.1em;}
+address {font-style: normal;}
+input[type="submit"] {cursor: pointer;}
+p{display:block; margin:0 0 15px 0;}
+
+::selection {background: #68d1c1; color: #ffffff;}
+::-moz-selection {background: #68d1c1; color: #ffffff;}
+
+@font-face {
+    font-family: 'pacifico';
+    src: url('../fonts/pacifico-webfont.eot');
+    src: url('../fonts/pacifico-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/pacifico-webfont.woff') format('woff'),
+         url('../fonts/pacifico-webfont.ttf') format('truetype'),
+         url('../fonts/pacifico-webfont.svg#pacificoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+body, html{
+	width: 100%;
+	height: 100%;
+	font-family: 'Proxima N W15 Bold';
+	font-size: 15px;
+	color: #a8abad;
+	overflow: hidden;
+}
+a{color:#a8abad;}
+.container{
+	position: relative;
+	width: 100%;
+	min-width: 1024px;
+	height: 100%;
+	min-height: 768px;
+	overflow: hidden;
+}
+
+.video-bg{z-index:1;}
+.video-bg video{width:100%; min-width:1024px; height:100%; min-height:768px;}
+
+.border-top{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 10px;
+	background: url('../img/border.png') 0 0 no-repeat;
+	background-size: cover;
+	z-index:10;
+}
+.border-bottom{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 10px;
+	background: url('../img/border.png') 0 0 no-repeat;
+	background-size: cover;
+	z-index: 30;
+	transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	-webkit-transition: all 0.4s;
+	-o-transition: all 0.4s;
+}
+.open .border-bottom{bottom:110px;}
+
+.site-width{
+	position: relative;
+	width: 960px;
+	margin: 0 auto;
+}
+
+.content{
+	position: absolute;
+	top: 60px;
+	left: 100%;
+	width: 100%;
+	text-align: center;
+	z-index: 2;
+	transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	-webkit-transition: all 0.4s;
+	-o-transition: all 0.4s;
+}
+.content.active{left:0;}
+.content.hide{left:-100%;}
+.title{position:relative; display:block; clear:both; font-family:'pacifico'; font-size:67px; color:#68d1c1;}
+.content p{margin:5px 0 0 0;}
+.clock{
+	position: relative;
+	display: block;
+	margin: 20px auto 0 auto;
+	width: 55px;
+	height: 55px;
+	background: url('../img/clock.png') 0 0 no-repeat;
+}
+.hour{
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 0;
+	width: 55px;
+	height: 55px;
+	background: url('../img/hour-hand.png') 0 0 no-repeat;
+	-webkit-animation: clock 20s linear infinite;
+	-moz-animation: clock 20s linear infinite;
+	-ms-animation: clock 20s linear infinite;
+	-o-animation: clock 20s linear infinite;
+	animation: clock 20s linear infinite;
+	-webkit-transform-origin: 50% 50%;
+	-moz-transform-origin: 50% 50%;
+	-o-transform-origin: 50% 50%;
+	-ms-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+}
+.minute{
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 0;
+	width: 55px;
+	height: 55px;
+	background: url('../img/min-hand.png') 0 0 no-repeat;
+	-webkit-animation: clock 5s linear infinite;
+	-moz-animation: clock 5s linear infinite;
+	-ms-animation: clock 5s linear infinite;
+	-o-animation: clock 5s linear infinite;
+	animation: clock 5s linear infinite;
+	-webkit-transform-origin: 50% 50%;
+	-moz-transform-origin: 50% 50%;
+	-o-transform-origin: 50% 50%;
+	-ms-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+}
+
+.footer{
+	position: fixed;
+	bottom: -110px;
+	left: 0;
+	width: 100%;
+	min-width: 1024px;
+	z-index: 30;	
+	transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	-webkit-transition: all 0.4s;
+	-o-transition: all 0.4s;
+}
+.open .footer{bottom:0;}
+.footer .nav-item{
+	position: relative;
+	display: block;
+	float: left;
+	margin: 10px 0 0 0;
+	padding: 0;
+	width: 20%;
+	height: 110px;
+	font-size: 13px;
+	line-height: 23px;
+	color: #999999;
+	border-right: 1px solid #dcdcdc;
+	background-color: #faf9f8;
+	overflow: visible;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	-webkit-transition: all 0.4s;
+	-o-transition: all 0.4s;
+}
+.footer .nav-item:last-child{border-right:none;}
+.footer .nav-item:hover, .footer .nav-item.active{height:120px; margin:0; color:#ffffff; border-right:none;}
+.footer .nav-item:nth-child(1):hover, .footer .nav-item:nth-child(1).active{background-color:#68d1c1;}
+.footer .nav-item:nth-child(2):hover, .footer .nav-item:nth-child(2).active{background-color:#63c3db;}
+.footer .nav-item:nth-child(3):hover, .footer .nav-item:nth-child(3).active{background-color:#ad8ff7;}
+.footer .nav-item:nth-child(4):hover, .footer .nav-item:nth-child(4).active{background-color:#be5deb;}
+.footer .nav-item:nth-child(5):hover, .footer .nav-item:nth-child(5).active{background-color:#624ab0;}
+.footer .nav-item p{
+	position:relative; 
+	display:block; 
+	width:135px; 
+	margin:25px auto 0 auto;
+	transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	-webkit-transition: all 0.4s;
+	-o-transition: all 0.4s;
+}
+.footer .nav-item:hover p, .footer .nav-item.active p{margin-top:35px;}
+.footer .nav-item .stage{font-family:'pacifico'; font-size:22px; color:#000000;}
+.footer .nav-item:hover .stage, .footer .nav-item.active .stage{color:#ffffff;}
+
+.sleep-timeline{
+	position: absolute;
+	top: 280px;
+	left: -150%;
+	width: 990px;
+	margin: 0 0 0 -495px;
+	text-align: center;
+	z-index: 2;
+	overflow: visible;
+	transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	-webkit-transition: all 0.4s;
+	-o-transition: all 0.4s;
+}
+.sleep-timeline.in{left:50%;}
+.sleep-timeline li{
+	position: relative;
+	display: block;
+	float: left;
+	width: 28px;
+	height: 20px;
+	padding: 4px 0;
+	font-size: 16px;
+	text-align: center;
+	margin-right: 90px;
+	color: #68d1c1;
+	background-color: #ffffff;
+	border-radius: 100%;
+	transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
+}
+.colour-1 .sleep-timeline li{color:#68d1c1;}
+.colour-2 .sleep-timeline li{color:#63c3db;}
+.colour-3 .sleep-timeline li{color:#ad8ff7;}
+.colour-4 .sleep-timeline li{color:#be5deb;}
+.colour-5 .sleep-timeline li{color:#624ab0;}
+.sleep-timeline li.active{
+	width: 48px;
+	height: 24px;
+	padding: 12px 0;
+	margin: -8px 80px 0 -10px;
+	color: #ffffff;
+	background-color: #68d1c1;
+}
+.colour-1 .sleep-timeline li.active{background-color:#68d1c1;}
+.colour-2 .sleep-timeline li.active{background-color:#63c3db;}
+.colour-3 .sleep-timeline li.active{background-color:#ad8ff7;}
+.colour-4 .sleep-timeline li.active{background-color:#be5deb;}
+.colour-5 .sleep-timeline li.active{background-color:#624ab0;}
+.sleep-timeline li:first-child a{
+	display: block;
+	width: 35px;
+	height: 30px;
+	padding: 40px 0 0 0;
+	font-size: 14px;
+	line-height: 16px;
+	background-color: transparent;
+	background-image: url('../img/clock-sprite.png');
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	border-radius: 0;
+	transition: background-position 0.2s;
+	-moz-transition: background-position 0.2s;
+	-webkit-transition: background-position 0.2s;
+	-o-transition: background-position 0.2s;
+}
+.colour-2 .sleep-timeline li:first-child a{background-position:-35px 0;}
+.colour-3 .sleep-timeline li:first-child a{background-position:-70px 0;}
+.colour-4 .sleep-timeline li:first-child a{background-position:-105px 0;}
+.colour-5 .sleep-timeline li:first-child a{background-position:-140px 0;}
+.sleep-timeline li:last-child{margin-right:0;}
+
+/*** Cycles end ***/
+.cycles-popup{
+	position: absolute;
+	bottom: -100%;
+	left: 0;
+	width: 100%;
+	min-height: 350px;
+	z-index: 100;
+	background: url('../img/cycles-bg.png') 0 0 repeat;
+	transition: 0.3s ease-in-out;
+	-moz-transition: 0.3s ease-in-out;
+	-webkit-transition: 0.3s ease-in-out;
+	-o-transition: 0.3s ease-in-out;
+}
+.colour-2 .cycles-popup{background: url('../img/cycles-bg-2.png') 0 0 repeat;}
+.colour-3 .cycles-popup{background: url('../img/cycles-bg-3.png') 0 0 repeat;}
+.colour-4 .cycles-popup{background: url('../img/cycles-bg-4.png') 0 0 repeat;}
+.colour-5 .cycles-popup{background: url('../img/cycles-bg-5.png') 0 0 repeat;}
+.cycles-popup.open{bottom:110px;}
+.cycles-content{
+	position: relative;
+	width: 1024px;
+	margin: 25px auto 0 auto;
+	overflow: hidden;
+}
+.cycles-text{
+	position: relative;
+	display: block;
+	float: left;
+	width: 420px;
+	color: #ffffff;
+	padding: 0 0 25px 0;
+}
+.cycles-title{
+	display: block;
+	font-family: 'pacifico';
+	font-size: 22px;
+	color: #ffffff;
+	margin: 0 0 25px 0;
+}
+.cycles-graph{
+	position: relative;
+	display: block;
+	float: right;
+	width: 565px;
+	height: 254px;
+	background: url('../img/graph.png') left bottom no-repeat;
+}
+.cycles-graph .cycles-title{margin:0 0 0 49px;}
+/*** Cycles popup end ***/
+
+/*** Markers ***/
+.marker{
+	position: absolute;
+	min-width: 37px;
+	max-width: 37px;
+	height: 37px;
+	cursor: pointer;
+	font-family: 'pacifico'; 
+	font-size: 23px;
+	background-position: 9.5px 9.5px;
+	background-repeat: no-repeat;
+	overflow: hidden;
+	z-index: 10;
+	border-radius: 37px;
+	transition: top 0.3s, max-width 0.2s, background-color 0.3s, color 0.3s;
+	-moz-transition: top 0.3s, max-width 0.2s, background-color 0.3s, color 0.3s;
+	-webkit-transition: top 0.3s, max-width 0.2s, background-color 0.3s, color 0.3s;
+	-o-transition: top 0.3s, max-width 0.2s, background-color 0.3s, color 0.3s;
+}
+.marker:hover, .marker.current{max-width:250px; z-index:20;}
+.marker p{margin:-4px 20px 0 40px;}
+.marker.hidden{top:110% !important;}
+.marker.brain{top:68%; left:28%; color:#ffffff; background-image:url('../img/cross-white.png');}
+.colour-1 .marker.brain{background-color:#68d1c1;}
+.colour-2 .marker.brain{background-color:#63c3db;}
+.colour-3 .marker.brain{background-color:#ad8ff7;}
+.colour-4 .marker.brain{background-color:#be5deb;}
+.colour-5 .marker.brain{background-color:#624ab0;}
+.marker.body{top:53%; left:76%; background-color:#ffffff;}
+.colour-1 .marker.body{color:#68d1c1; background-image:url('../img/cross-turq.png');}
+.colour-2 .marker.body{color:#63c3db; background-image:url('../img/cross-blue.png');}
+.colour-3 .marker.body{color:#ad8ff7; background-image:url('../img/cross-purple-1.png');}
+.colour-4 .marker.body{color:#be5deb; background-image:url('../img/cross-purple-2.png');}
+.colour-5 .marker.body{color:#624ab0; background-image:url('../img/cross-purple-3.png');}
+.marker.waves{
+	max-width:58px; 
+	min-width:58px; 
+	height:58px; 
+	border-radius:58px; 
+	top:63%; 
+	left:21%;
+	background-color:#ffffff; 
+	background-position: 0 9.5px;
+	background-repeat:repeat-x;
+	animation: small-waves 1s infinite linear;
+	-webkit-animation: small-waves 1s infinite linear;
+	-moz-animation: small-waves 1s infinite linear;
+	-o-animation: small-waves 1s infinite linear;
+}
+.colour-1 .marker.waves{color:#68d1c1; background-image:url('../img/small-wave-turq.png');}
+.colour-2 .marker.waves{color:#63c3db; background-image:url('../img/small-wave-blue.png');}
+.colour-3 .marker.waves{color:#ad8ff7; background-image:url('../img/small-wave-purple-1.png');}
+.colour-4 .marker.waves{color:#be5deb; background-image:url('../img/small-wave-purple-2.png');}
+.colour-5 .marker.waves{color:#624ab0; background-image:url('../img/small-wave-purple-3.png');}
+.marker.hormones{top:63%; left:40%; background-color:#ffffff;}
+.colour-1 .marker.hormones{color:#68d1c1; background-image:url('../img/cross-turq.png');}
+.colour-2 .marker.hormones{color:#63c3db; background-image:url('../img/cross-blue.png');}
+.colour-3 .marker.hormones{color:#ad8ff7; background-image:url('../img/cross-purple-1.png');}
+.colour-4 .marker.hormones{color:#be5deb; background-image:url('../img/cross-purple-2.png');}
+.colour-5 .marker.hormones{color:#624ab0; background-image:url('../img/cross-purple-3.png');}
+.marker.immune{top:56%; left:54%; color:#ffffff; background-image:url('../img/cross-white.png');}
+.colour-1 .marker.immune{background-color:#68d1c1;}
+.colour-2 .marker.immune{background-color:#63c3db;}
+.colour-3 .marker.immune{background-color:#ad8ff7;}
+.colour-4 .marker.immune{background-color:#be5deb;}
+.colour-5 .marker.immune{background-color:#624ab0;}
+.marker.skin{top:72%; left:43%; color:#ffffff; background-image:url('../img/cross-white.png');}
+.colour-1 .marker.skin{background-color:#68d1c1;}
+.colour-2 .marker.skin{background-color:#63c3db;}
+.colour-3 .marker.skin{background-color:#ad8ff7;}
+.colour-4 .marker.skin{background-color:#be5deb;}
+.colour-5 .marker.skin{background-color:#624ab0;}
+.marker.mouth{top:74%; left:47%; background-color:#ffffff;}
+.colour-1 .marker.mouth{color:#68d1c1; background-image:url('../img/cross-turq.png');}
+.colour-2 .marker.mouth{color:#63c3db; background-image:url('../img/cross-blue.png');}
+.colour-3 .marker.mouth{color:#ad8ff7; background-image:url('../img/cross-purple-1.png');}
+.colour-4 .marker.mouth{color:#be5deb; background-image:url('../img/cross-purple-2.png');}
+.colour-5 .marker.mouth{color:#624ab0; background-image:url('../img/cross-purple-3.png');}
+/*** Markers end ***/
+
+
+/*** Info bubbles ***/
+.info{
+	position: absolute;
+	width: 439px;
+	height: 210px;
+	border-radius: 10px;
+	color: #ffffff;
+	padding:25px;
+	overflow: hidden;
+	z-index: 15;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
+}
+.info-inner{display:block; width:389px; height:160px; overflow:hidden;}
+.colour-1 .info{background-color:#68d1c1;}
+.colour-2 .info{background-color:#63c3db;}
+.colour-3 .info{background-color:#ad8ff7;}
+.colour-4 .info{background-color:#be5deb;}
+.colour-5 .info{background-color:#624ab0;}
+.info.brain{
+	width: 0;
+	height: 0;
+	padding:0;
+	top: 69.9%;
+	left:28.9%;
+	border-radius: 100%;
+}
+.colour-1 .info.brain{background-color:#68d1c1;}
+.colour-2 .info.brain{background-color:#63c3db;}
+.colour-3 .info.brain{background-color:#ad8ff7;}
+.colour-4 .info.brain{background-color:#be5deb;}
+.colour-5 .info.brain{background-color:#624ab0;}
+.info.brain.open{
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	border-radius: 0;
+	z-index: 25;
+}
+.close{
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	width: 41px;
+	height: 41px;
+	background: url('../img/close.png') center center no-repeat;
+	z-index: 50;
+}
+.info .title{margin-top:60px; color:#ffffff; text-align:center;}
+.info .popup-title{display:block; font-family:'pacifico'; font-size:34px; margin:20px 0 0 0;}
+.info .popup-content{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width:440px;
+	margin: -210px 0 0 -470px;
+	font-size: 19px;
+	color: #ffffff;
+}
+.brain-illustration{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 535px;
+	height: 438px;
+	margin: -219px 0 565px;
+	background: url('../img/brain.png') center center no-repeat;
+}
+
+.info.body{bottom:45%; left:100%; display:block;}
+.info.body.current{left:67%;}
+.info.waves{
+	display:none;
+	max-width:58px; 
+	min-width:58px; 
+	height:58px;
+	border-radius:58px; 
+	top:63%; 
+	left:21%;
+	background-color:#ffffff; 
+	background-position: 0 9.5px;
+	background-repeat:repeat-x;
+	animation: small-waves 1s infinite linear;
+	-webkit-animation: small-waves 1s infinite linear;
+	-moz-animation: small-waves 1s infinite linear;
+	-o-animation: small-waves 1s infinite linear;
+}
+.info.hormones{bottom:35%; left:-100%;}
+.info.hormones.current{left:33%;}
+.info.immune{bottom:42%; left:-100%;}
+.info.immune.current{left:48%;}
+.info.skin{bottom:26%; left:-100%;}
+.info.skin.current{left:34.5%;}
+.info.mouth{bottom:24%; left:100%;}
+.info.mouth.current{left:39%;}
+/*** Info bubbles end ***/
+
+
+/*** Colours ***/
+.content-1 .title{color:#68d1c1;}
+.content-2 .title{color:#63c3db;}
+.content-3 .title{color:#ad8ff7;}
+.content-4 .title{color:#be5deb;}
+.content-5 .title{color:#624ab0;}
+/*** Colours end ***/
+
+
+/*** Animations ***/
+@keyframes clock{
+	0% {transform:rotate(0deg);}
+	100% {transform:rotate(360deg);}
+}
+@-moz-keyframes clock{
+	0% {-moz-transform:rotate(0deg);}
+	100% {-moz-transform:rotate(360deg);}
+}
+@-webkit-keyframes clock{
+	0% {-webkit-transform:rotate(0deg);}
+	100% {-webkit-transform:rotate(360deg);}
+}
+@-o-keyframes clock{
+	0% {-o-transform:rotate(0deg);}
+	100% {-o-transform:rotate(360deg);}
+}
+
+@keyframes small-waves{
+	0% {background-position:0 9.5px;}
+	100% {background-position:100% 9.5px;}
+}
+@-moz-keyframes small-waves{
+	0% {background-position:0 9.5px;}
+	100% {background-position:100% 9.5px;}
+}
+@-webkit-keyframes small-waves{
+	0% {background-position:0 0;}
+	100% {background-position:100% 9.5px;}
+}
+@-o-keyframes small-waves{
+	0% {background-position:0 0;}
+	100% {background-position:100% 9.5px;}
+}
